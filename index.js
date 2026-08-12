@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Product modal (cart-like) logic
 	const viewAllBtn = document.getElementById('viewAllBtn');
+	const highlightBtn = document.getElementById('viewAllBtn2');
 	const productModal = document.getElementById('productModal');
 	const productModalClose = productModal ? productModal.querySelector('.close') : null;
 	const cartListEl = document.getElementById('cartList');
@@ -92,6 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (viewAllBtn) viewAllBtn.addEventListener('click', (e) => { e.preventDefault(); openProductModal(); });
 
+	if (highlightBtn) {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				highlightBtn.classList.toggle('border-highlight', entry.isIntersecting);
+			});
+		}, { threshold: 0.1 });
+		observer.observe(highlightBtn);
+	}
 	if (productModalClose) productModalClose.addEventListener('click', closeProductModal);
 
 	window.addEventListener('click', (e) => { if (e.target === productModal) closeProductModal(); });

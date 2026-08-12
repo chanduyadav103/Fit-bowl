@@ -48,8 +48,10 @@ html,body{height:100%;margin:0;font-family:Montserrat,system-ui,Arial,sans-serif
 .product-card h4{margin:10px 0 8px;font-size:15px}
 .btn-small{background:var(--green);color:#fff;border:0;padding:8px 10px;border-radius:6px;font-weight:700}
 .view-all{background:var(--green);color:#fff;border:0;padding:10px 18px;border-radius:20px}
-#viewAllBtn2{background:var(--beige);color:var(--green);border:0;padding:15px 23px;border-radius:20px;box-shadow:0 8px 20px rgba(43,105,43,.2);margin-left:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;}
-#viewAllBtn2:hover{background:#dee4db;}
+#viewAllBtn2{background:#fff;color:var(--green);border:2px solid #ffe082;padding:15px 23px;border-radius:20px;box-shadow:0 6px 18px rgba(255,193,7,.12);margin-left:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:border-color .35s ease, box-shadow .35s ease, transform .35s ease, background .35s ease;}
+#viewAllBtn2:hover{background:#fcf7e4;}
+#viewAllBtn2.border-highlight{border-color:#ffb300;box-shadow:0 0 0 6px rgba(255,193,7,.18);animation:borderPulseYellow 2.2s ease-in-out infinite;transform:translateY(-1px);}
+@keyframes borderPulseYellow{0%,100%{box-shadow:0 0 0 8px rgba(255,193,7,.14);}50%{box-shadow:0 0 0 18px rgba(255,193,7,.08);}}
 .center{text-align:center;margin:18px 0}
 /* Modal for viewing/selecting products */
 .hidden{display:none}
@@ -67,6 +69,38 @@ html,body{height:100%;margin:0;font-family:Montserrat,system-ui,Arial,sans-serif
 @media (max-width:900px){
 	.modal-products{grid-template-columns:repeat(2,1fr)}
 }
+
+/* Responsive fixes for footer map on small screens */
+@media (max-width:900px){
+	.footer-inner{flex-direction:column;align-items:center;gap:16px}
+	.footer-map{margin-left:0;width:100%;max-width:520px;padding:8px}
+	.footer-map .map-wrap{height:220px}
+}
+
+@media (max-width:520px){
+	.footer-map{max-width:100%;padding:6px}
+	.footer-map .map-wrap{height:180px}
+}
+
+/* iPhone-safe adjustments for various models (iPhone SE, 8, X/11/12/13/14/etc.) */
+.footer-map{box-sizing:border-box;padding-left:calc(10px + env(safe-area-inset-left));padding-right:calc(10px + env(safe-area-inset-right));}
+
+@media (max-width:420px){
+	.footer-inner{padding-left:12px;padding-right:12px}
+	.footer-map{margin-left:0;width:100%;max-width:100%;padding:8px}
+	.footer-map .map-wrap{height:200px}
+}
+
+@media (max-width:390px){
+	.footer-map .map-wrap{height:180px}
+}
+
+@media (max-width:360px){
+	.footer-map .map-wrap{height:160px}
+}
+
+/* Ensure the embedded iframe is responsive and fills its container */
+.footer-map .map-wrap iframe{width:100%;height:100%;display:block;border:0}
 @media (max-width:520px){
 	.modal-products{grid-template-columns:1fr}
 }
@@ -95,8 +129,10 @@ html,body{height:100%;margin:0;font-family:Montserrat,system-ui,Arial,sans-serif
 .footer-col a{display:block;color:var(--muted);text-decoration:none;margin:6px 0}
 .copyright{text-align:center;padding:12px 0;color:var(--muted);font-size:13px}
 
-/* Shift the footer map slightly to the right */
-.footer-map{margin-left:100px;padding:10px;border:1px solid #1f1e1d;border-radius:10px;background:#fff}
+/* Shift the footer map slightly to the right on wide screens */
+@media (min-width:901px){
+	.footer-map{margin-left:100px;padding:10px;border:1px solid #1f1e1d;border-radius:10px;background:#fff}
+}
 
 /* Medium / small screens */
 @media (max-width:900px){
