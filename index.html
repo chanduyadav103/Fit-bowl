@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fit Bowl-Healthy Homemade Foods</title>
+	<meta name="description" content="Fit Bowl healthy homemade foods, nutritious meals, and delicious homemade products made with quality ingredients." />
+	<link rel="icon" href="images/img-2.jpeg" type="image/jpeg" />
+	<link rel="shortcut icon" href="images/img-2.jpeg" type="image/jpeg" />
+	<!-- SVG fallback if JPEG isn't available -->
+	<link rel="icon" href="images/img-22.jpeg" type="image/svg+xml" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<div class="logo">
+					<img src="images/img-22.jpeg" alt="Fit Bowl Logo" />
+				</div>
+				<div class="brand-text">
+					<div class="name">FIT BOWL</div>
+					<div class="tag">Healthy is Happy</div>
+				</div>
+			</div>
+
+			<nav class="main-nav">
+				<a href="#">Home</a>
+				<a href="#about">About Us</a>
+				<a href="#products">Products</a>
+				<a href="#why">Why Fit Bowl</a>
+				<a href="#gallery">Gallery</a>
+				<a href="#contact">Contact Us</a>
+			</nav>
+
+			<div class="cta-actions">
+				<a class="whatsapp-btn" id="whatsappTop" href="#">Order on WhatsApp<br><span>79813 59187</span></a>
+				<button class="menu-toggle" id="menuToggle">☰</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<div class="hero-left">
+					<p class="hero-top-text">Welcome to</p>
+					<h1 class="hero-title">FIT BOWL</h1>
+					<p class="hero-subtitle">HEALTHY HOMEMADE FOODS</p>
+					<p class="lead">We prepare healthy, tasty and homemade snacks with the best quality ingredients for you and your family.</p>
+
+					<div class="hero-icons">
+						<div class="hero-icon-item">100% Homemade</div>
+						<div class="hero-icon-item">No Preservatives</div>
+						<div class="hero-icon-item">Freshly Prepared</div>
+						<div class="hero-icon-item">Hygienically Packed</div>
+					</div>
+
+					<a class="primary-btn" id="whatsappHero" href="#"><span>ORDER NOW ON WHATSAPP</span><strong>79813 59187</strong></a>
+				</div>
+
+				<div class="hero-right">
+					<div class="hero-image-wrap">
+						<img src="images/img-1.png" alt="Fit Bowl Snacks">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="products" class="products container">
+			<h3 class="section-title">Our Products</h3>
+			<div class="product-grid">
+				<article class="product-card">
+					<img src="images/img-4.jpg" alt="Ragi Puttu">
+					<h4>Ragi Puttu</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				<article class="product-card">
+					<img src="images/img-7.jpg" alt="Chikkes">
+					<h4>Chikkies</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				<article class="product-card">
+					<img src="images/img-6.jpg" alt="Dry Fruit Laddu">
+					<h4>Dry Fruit Laddu</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				
+				<article class="product-card">
+					<img src="images/img-5.jpg" alt="Sunnundalu">
+					<h4>Sunnundalu</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				<article class="product-card">
+					<img src="images/rava-ladoo.jpg" alt="Ravva Laddu">
+					<h4>Ravva Laddu</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				<article class="product-card">
+					<img src="images/img-3.jpg" alt="Pappu Chekkalu">
+					<h4>Pappu Chekkalu</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				
+				<article class="product-card">
+					<img src="images/img-8.jpg" alt="Ragi Muruku">
+					<h4>Ragi Muruku</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+				<article class="product-card">
+					<img src="images/Peanut-Laddu.webp" alt="Peanut Laddu">
+					<h4>Peanut Laddu</h4>
+					<button class="btn-small">ORDER NOW</button>
+				</article>
+			</div>
+
+
+<div class="center">
+	<button id="viewAllBtn" class="view-all">Select multiple Products</button>
+		
+</div>
+
+<!-- Product Modal -->
+<div id="productModal" class="modal" style="display:none;">
+	<div class="modal-content">
+
+		<span class="close">&times;</span>
+
+		<h2>Select Products</h2>
+
+		<div class="product-grid modal-select-grid">
+
+			<div class="product-card">
+				<img src="images/img-4.jpg" alt="Ragi Puttu">
+				<h4>Ragi Pittu</h4>
+				<button type="button" onclick="addToCart('Ragi Puttu')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/img-7.jpg" alt="Chikkies">
+				<h4>Chikkies</h4>
+				<button type="button" onclick="addToCart('Chikkies')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/img-6.jpg" alt="Dry Fruit Laddu">
+				<h4>Dry Fruit Laddu</h4>
+				<button type="button" onclick="addToCart('Dry Fruit Laddu')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/img-5.jpg" alt="Sunnundalu">
+				<h4>Sunnundalu</h4>
+				<button type="button" onclick="addToCart('Sunnundalu')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/rava-ladoo.jpg" alt="Ravva Laddu">
+				<h4>Ravva Laddu</h4>
+				<button type="button" onclick="addToCart('Ravva Laddu')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/img-3.jpg" alt="Pappu Chekkalu">
+				<h4>Pappu Chekkalu</h4>
+				<button type="button" onclick="addToCart('Pappu Chekkalu')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/img-8.jpg" alt="Ragi Muruku">
+				<h4>Ragi Muruku</h4>
+				<button type="button" onclick="addToCart('Ragi Muruku')">Add to Cart</button>
+			</div>
+
+			<div class="product-card">
+				<img src="images/Peanut-Laddu.webp" alt="Peanut Laddu">
+				<h4>Peanut Laddu</h4>
+				<button type="button" onclick="addToCart('Peanut Laddu')">Add to Cart</button>
+			</div>
+
+		</div>
+
+		<hr>
+
+		<h3>🛒 Cart</h3>
+
+		<ul id="cartList"></ul>
+
+		<button class="order-btn" type="button" id="sendOrderBtn">Order on WhatsApp</button>
+
+	</div>
+</div>
+
+		<section id="why" class="why container">
+			<h3 class="section-title">Why Choose Fit Bowl?</h3>
+			<div class="why-grid">
+				<div class="why-item">100% Homemade</div>
+				<div class="why-item">No Preservatives</div>
+				<div class="why-item">Freshly Prepared</div>
+				<div class="why-item">Quality Ingredients</div>
+				<div class="why-item">Hygienically Packed</div>
+				<div class="why-item">Made with Love</div>
+			</div>
+		</section>
+
+		<section id="about" class="about container">
+			<div class="about-inner">
+				<div class="about-img">
+					<img src="images/img-22.jpeg" alt="About Fit Bowl">
+				</div>
+				<div class="about-text">
+					<h3>About Fit Bowl</h3>
+					<p><span  class="highlight">Fit Bowl</span> is a homemade food brand dedicated to offering healthy, delicious, and traditional snacks.
+We prepare every product using natural, high-quality ingredients with no compromise on freshness.
+Our recipes combine authentic homemade flavors with balanced nutrition for everyday wellness.
+From wholesome snacks to nutritious treats, every bite is crafted with care and love.
+We believe healthy eating should be simple, satisfying, and full of great taste.
+At Fit Bowl, our goal is to bring homemade goodness to every home with quality you can trust.
+.</p>
+					<a class="secondary-btn" href="#contact">Know More About Us</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-banner">
+			<div class="container cta-inner">
+				<div>
+					<h3>Healthy Food For A Better You</h3>
+					<p>Eat Healthy, Stay Healthy with Fit Bowl!</p>
+				</div>
+				
+<button id="viewAllBtn2" class="view-all">Orders Delivered Within 24 Hours...!</button>
+		</div>
+		</section>
+
+		<section id="testimonials" class="testimonials container">
+			<h3 class="section-title">What Our Customers Say</h3>
+			<div class="testi-wrap">
+				<button class="t-arrow left" id="tPrev">‹</button>
+				<div class="testi" id="testiText">Very tasty and healthy snacks. My kids love the ragi chocolates and laddus! — Sangeetha, Tirupati</div>
+				<button class="t-arrow right" id="tNext">›</button>
+			</div>
+		</section>
+
+	</main>
+
+	<footer id="contact" class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand">
+				<div class="name">FIT BOWL</div>
+				<div class="tag">Healthy homemade foods made with love</div>
+			</div>
+			<div class="footer-col">
+				<h4>Quick Links</h4>
+				<a href="#">Home</a>
+				<a href="#about">About</a>
+				<a href="#products">Products</a>
+			</div>
+			<div class="footer-col">
+				<h4>Contact</h4>
+				<p>79813 59187</p>
+				<p>Tirupati, Andhra Pradesh</p>
+				<p>9:00 AM - 8:00 PM</p>
+			</div>
+			<div class="footer-col footer-map">
+				<h4>Location</h4>
+				<div class="map-wrap" style="width:100%;height:160px;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.1);">
+					<iframe src="https://www.google.com/maps?q=13.587322235107422,79.39837646484375&z=17&output=embed" style="border:0;width:100%;height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<p style="margin-top:8px;font-size:14px;"><a href="https://www.google.com/maps?q=13.587322235107422,79.39837646484375&z=17&hl=en" target="_blank" rel="noopener">Open in Google Maps</a></p>
+			</div>
+		</div>
+		<div class="copyright">© 2024 Fit Bowl. All Rights Reserved.</div>
+	</footer>
+
+	<script src="index.js"></script>
+</body>
+</html>
