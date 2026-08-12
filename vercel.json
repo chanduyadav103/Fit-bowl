@@ -1,7 +1,0 @@
-{
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "^/googled02d368e078d22c7.html$", "dest": "/public/googled02d368e078d22c7.html" },
-    { "src": "/.*", "dest": "/index.html" }
-  ]
-}
