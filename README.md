@@ -40,9 +40,9 @@ The website showcases the following homemade products:
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – Website structure
+- **React** – Component-based interface and interactive functionality
+- **Vite** – Development server and production builds
 - **CSS3** – Styling and responsive layouts
-- **JavaScript** – Interactive functionality and cart management
 - **Google Fonts** – Typography
 - **WhatsApp API** – Direct customer ordering
 - **Google Maps Embed** – Business location integration
@@ -51,19 +51,17 @@ The website showcases the following homemade products:
 
 ```text
 Fit-bowl/
-│
-├── images/
-│   ├── Product images
-│   └── Website images
-│
 ├── public/
-│
+│   ├── images/
+│   └── googled02d368e078d22c7.html
+├── src/
+│   ├── App.jsx
+│   └── main.jsx
 ├── index.html
 ├── index.css
-├── index.js
 ├── preview.html
-├── googled02d368e078d22c7.html
-└── .gitignore
+├── package.json
+└── vite.config.js
 ```
 
 ## 🚀 How to Run the Project Locally
@@ -82,17 +80,19 @@ git clone https://github.com/chanduyadav103/Fit-bowl.git
 cd Fit-bowl
 ```
 
-**3. Open the project**
+**3. Install dependencies**
 
-Open the `index.html` file in your browser.
-
-Alternatively, use the Live Server extension in Visual Studio Code.
-
-**4. Preview the website**
-
-```text
-http://127.0.0.1:5500/index.html
+```bash
+npm install
 ```
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite (usually `http://localhost:5173`). To create a production build, run `npm run build`.
 
 ## 📱 Ordering Process
 
